@@ -50,7 +50,7 @@ def unbalanced_sub_sampling(
     """
     with with_temporary_numpy_seed(seed):
         return np.random.choice(
-            total_num_samples, size=skip_samples + num_samples, replace=False
+            total_num_samples, size=skip_samples + num_samples, replace=True
         )[skip_samples:]
 
 
